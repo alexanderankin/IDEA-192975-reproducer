@@ -16,6 +16,7 @@
 new=build/classes/java/main/META-INF/spring-configuration-metadata.json
 # granted this is not the "old" location - but bear with me
 old=src/main/resources/META-INF/additional-spring-configuration-metadata.json
+mkdir -p $(dirname $old)
 cp $new $old
 ```
 
