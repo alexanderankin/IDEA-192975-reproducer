@@ -4,3 +4,19 @@
  * This is a general purpose Gradle build.
  * To learn more about Gradle by exploring our Samples at https://docs.gradle.org/8.4/samples
  */
+plugins {
+    id 'java'
+}
+
+repositories.mavenCentral()
+
+dependencies {
+    implementation platform('org.springframework.boot:spring-boot-dependencies:3.2.0')
+    annotationProcessor platform('org.springframework.boot:spring-boot-dependencies:3.2.0')
+    
+    annotationProcessor 'org.projectlombok:lombok'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+    
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+}
