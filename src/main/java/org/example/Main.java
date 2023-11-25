@@ -17,7 +17,6 @@ public class Main {
     }
     
     @Data
-    @Accessors(chain = true)
     @Component
     @ConfigurationProperties("reproducer.props")
     static class Reproducer {
